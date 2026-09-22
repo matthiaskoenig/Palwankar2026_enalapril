@@ -1,0 +1,126 @@
+\documentclass[10pt,a4paper]{article} 
+\setlength{\parindent}{0pt} 
+% text formatting 
+\usepackage[a4paper,left=2.4cm,right=2.4cm,top=2.4cm,bottom=2.4cm]{geometry}
+% \usepackage[utf8]{inputenc} %%% 
+%\usepackage{natbib}
+\usepackage{hyperref}
+\hypersetup{
+  hidelinks,
+  plainpages=false,
+}
+\pagestyle{empty}
+\usepackage{graphicx}
+% \usepackage[draft]{graphicx}
+\usepackage{textcomp}
+\usepackage{bbding}
+\usepackage{amssymb}
+\usepackage{multicol}
+\setlength{\columnseprule}{1pt}
+\def\columnseprulecolor{\color{grey}}
+\usepackage{fancyhdr}
+\setlength{\unitlength}{1in}
+
+\usepackage{soul}
+% \usepackage{xcolor}
+% \newcommand{\hlone}[1]{{\sethlcolor{FFFF00}\hl{#1}}}
+% \newcommand{\hltwo}[1]{{\sethlcolor{cyan}\hl{#1}}}
+% \newcommand{\hlfinal}[1]{{\sethlcolor{lime}\hl{#1}}}
+
+% table layout
+\usepackage{booktabs}  % pandas tables
+\usepackage{array}
+\usepackage{tabularray}
+\UseTblrLibrary{caption} % to make Table X bold for longtblr
+\SetTblrStyle{caption-tag}{font=\bfseries}
+\DefTblrTemplate{contfoot-text}{default}{}
+\DefTblrTemplate{conthead-text}{default}{}
+\DefTblrTemplate{capcont}{default}{}
+% \SetTblrStyle{caption-text}{font=\bfseries}
+\usepackage{multirow}
+\usepackage{makecell}  % linebreak in table
+\usepackage{longtable} % for 'long table' environment
+\usepackage{rotating}
+\usepackage[table]{xcolor}
+% \usepackage{subcaption} %  for subfigures environments 
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{tabularx}
+\usepackage{changepage}
+\usepackage{lscape}
+\usepackage{adjustbox}
+\usepackage{afterpage}
+\usepackage[labelfont=bf]{caption}
+\captionsetup{justification=centering}
+% \captionsetup[longtblr]{labelfont=bf}
+\usepackage{subcaption}
+\usepackage[acronym, nonumberlist, nopostdot, nogroupskip]{glossaries}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage[
+	backend     = biber,
+	maxbibnames = 99,
+	natbib      = true,
+	doi         = true,
+	isbn        = false,
+	url         = true,
+	citestyle   = numeric,
+  	sorting = none
+]{biblatex}
+\addbibresource{enalapril.bib}
+% \usepackage{times}  %%%
+\usepackage{newtxtext,newtxmath}
+\usepackage{setspace}
+\setstretch{1.0}
+
+\usepackage{ragged2e}
+\usepackage[T1]{fontenc} 
+\usepackage{authblk}
+
+\PassOptionsToPackage{nopatch=footnote}{microtype}
+\usepackage{microtype}
+
+% \usepackage{xr}
+% \externaldocument{08_suppldata}
+
+%svg
+\usepackage{svg}
+\usepackage{amsmath}
+\usepackage{siunitx}
+
+%tables
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+%for ticks in data table column "fit"
+\usepackage{pifont}
+\usepackage{pdflscape}
+% \usepackage{color, colortbl}
+% \usepackage{colortbl}
+\definecolor{Lightgrey}{rgb}{0.9, 0.9, 0.9}
+% \definecolor{}{HTML}{FFCC00} 
+% \definecolor{Yellow}{HTML}{FFFF00}
+
+
+\title{A Physiologically Based Pharmacokinetic and Pharmacodynamic (PBPK/PD) Model of Enalapril}
+\author[1]{Shubhankar Palwankar}
+\author[2]{Mariia Myshkina}
+\author[3]{Matthias König}
+\affil[1,2,3]{Institute for Biology, ITB, Humboldt-Universität zu Berlin, Philippstraße 13, 10115 Berlin, Germany}
+\affil[3]{University Hospital Schleswig-Holstein, Campus Lübeck, First Department of Medicine, Ratzeburger Allee 160, 23562 Lübeck, Germany}
+% \date{\today}
+
+\begin{document}
+\maketitle
+
+\input{01_abstract.tex}
+\input{02_introduction.tex}
+\input{03_methods.tex}
+\input{04_results.tex}
+\input{05_discussion.tex}
+\input{06_miscellaneous.tex}
+
+%%% BIBLIOGRAPHY %%%
+% \printbibliography[heading = bibintoc]
+
+\end{document}
